@@ -48,9 +48,6 @@ struct CashRegisterProviderProxy {
     2: optional CashRegisterProviderProxyOptions options
 }
 
-exception CategoriesNotFound {}
-exception DocumentTypesNotFound {}
-exception CashRegisterProvidersNotFound {}
 
 struct Category {
     1: required CategoryRef ref
@@ -76,12 +73,9 @@ struct CashRegisterProvider {
 service DominantCache {
 
         list<Category> GetCategories ()
-                throws (1: CategoriesNotFound ex1)
 
         list<DocumentType> GetDocumentTypes ()
-                throws (1: DocumentTypesNotFound ex1)
 
         list<CashRegisterProvider> GetCashRegisterProviders ()
-                throws (1: CashRegisterProvidersNotFound ex1)
 
 }
