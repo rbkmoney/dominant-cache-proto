@@ -1,0 +1,12 @@
+{
+  "name": "dominant-cache-proto",
+  "version": "1.0.0",
+  "description": "Dominant cache thrift protocol",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbkmoney/dominant-cache-proto.git"
+  },
+  "author": "rbk.money",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/rbkmoney/dominant-cache-proto#readme"
+}
