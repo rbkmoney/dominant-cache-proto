@@ -30,17 +30,17 @@ typedef string CashRegisterProviderProxyRef
 typedef map<string, string> CashRegisterProviderProxyOptions
 
 enum CashRegisterProviderParameterType {
-    stringType
-    integerType
-    urlType
-    passwordType
+    string_type
+    integer_type
+    url_type
+    password_type
 }
 
 struct CashRegisterProviderParameter {
     1: required CashRegisterProviderParameterId id
     2: optional CashRegisterProviderParameterDescription description
     3: optional CashRegisterProviderParameterType type
-    4: required CashRegisterProviderIsRequired isRequired
+    4: required CashRegisterProviderIsRequired is_required
 }
 
 struct CashRegisterProviderProxy {
