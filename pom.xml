@@ -8,7 +8,6 @@
         <groupId>com.rbkmoney</groupId>
         <artifactId>parent</artifactId>
         <version>1.0.5</version>
-        <relativePath>..</relativePath>
     </parent>
 
     <artifactId>dominant-cache-proto</artifactId>
@@ -29,7 +28,7 @@
         <dependency>
             <groupId>com.rbkmoney.woody</groupId>
             <artifactId>woody-thrift</artifactId>
-            <version>1.1.22</version>
+            <version>[1.1.22,)</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
