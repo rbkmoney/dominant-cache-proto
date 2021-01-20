@@ -38,7 +38,7 @@ enum CashRegisterProviderParameterType {
 
 struct CashRegisterProviderParameter {
     1: required CashRegisterProviderParameterId id
-    2: optional CashRegisterProviderParameterDescription description
+    2: required CashRegisterProviderParameterDescription description
     3: optional CashRegisterProviderParameterType type
     4: required CashRegisterProviderIsRequired is_required
 }
