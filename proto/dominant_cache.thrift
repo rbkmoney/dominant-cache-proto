@@ -39,7 +39,7 @@ enum CashRegisterProviderParameterType {
 struct CashRegisterProviderParameter {
     1: required CashRegisterProviderParameterId id
     2: optional CashRegisterProviderParameterDescription description
-    3: optional CashRegisterProviderParameterType type
+    3: required CashRegisterProviderParameterType type
     4: required CashRegisterProviderIsRequired is_required
 }
 
@@ -52,8 +52,8 @@ struct CashRegisterProviderProxy {
 struct Category {
     1: required CategoryRef ref
     2: required CategoryName name
-    3: optional CategoryDescription description
-    4: required CategoryType type
+    3: required CategoryDescription description
+    4: optional CategoryType type
 }
 
 struct DocumentType {
@@ -66,7 +66,7 @@ struct CashRegisterProvider {
     1: required CashRegisterProviderRef ref
     2: required CashRegisterProviderName name
     3: optional CashRegisterProviderDescription description
-    4: required CashRegisterProviderParameter parameter
+    4: required list<CashRegisterProviderParameter> parameter
     5: required CashRegisterProviderProxy proxy
 }
 
