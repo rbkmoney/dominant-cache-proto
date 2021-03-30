@@ -29,11 +29,29 @@ typedef bool CashRegisterProviderIsRequired
 typedef string CashRegisterProviderProxyRef
 typedef map<string, string> CashRegisterProviderProxyOptions
 
+typedef string ContractTemplateName
+typedef string ContractTemplateDescription
+typedef string TermSetHierarchyRef
+
 enum CashRegisterProviderParameterType {
     string_type
     integer_type
     url_type
     password_type
+}
+
+union Lifetime {
+    1: base.Timestamp timestamp
+    2: LifetimeInterval interval
+}
+
+struct LifetimeInterval {
+    1: optional i16 years
+    2: optional i16 months
+    3: optional i16 days
+    4: optional i16 hours
+    5: optional i16 minutes
+    6: optional i16 seconds
 }
 
 struct CashRegisterProviderParameter {
@@ -70,6 +88,14 @@ struct CashRegisterProvider {
     5: required CashRegisterProviderProxy proxy
 }
 
+struct ContractTemplate {
+    1: optional ContractTemplateName name
+    2: required ContractTemplateDescription description
+    3: optional Lifetime valid_since
+    4: optional Lifetime valid_until
+    5: required TermSetHierarchyRef id
+}
+
 service DominantCache {
 
         list<Category> GetCategories ()
@@ -77,5 +103,7 @@ service DominantCache {
         list<DocumentType> GetDocumentTypes ()
 
         list<CashRegisterProvider> GetCashRegisterProviders ()
+
+        list<ContractTemplate> GetContractTemplates ()
 
 }
