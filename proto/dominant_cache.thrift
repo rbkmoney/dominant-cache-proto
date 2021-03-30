@@ -93,7 +93,7 @@ struct ContractTemplate {
     2: required ContractTemplateDescription description
     3: optional Lifetime valid_since
     4: optional Lifetime valid_until
-    5: required TermSetHierarchyRef id
+    5: required TermSetHierarchyRef terms_id
 }
 
 service DominantCache {
