@@ -29,6 +29,7 @@ typedef bool CashRegisterProviderIsRequired
 typedef string CashRegisterProviderProxyRef
 typedef map<string, string> CashRegisterProviderProxyOptions
 
+typedef string ContractTemplateRef
 typedef string ContractTemplateName
 typedef string ContractTemplateDescription
 typedef string TermSetHierarchyRef
@@ -89,11 +90,12 @@ struct CashRegisterProvider {
 }
 
 struct ContractTemplate {
-    1: optional ContractTemplateName name
-    2: required ContractTemplateDescription description
-    3: optional Lifetime valid_since
-    4: optional Lifetime valid_until
-    5: required TermSetHierarchyRef terms_id
+    1: required ContractTemplateRef ref
+    2: optional ContractTemplateName name
+    3: required ContractTemplateDescription description
+    4: optional Lifetime valid_since
+    5: optional Lifetime valid_until
+    6: required TermSetHierarchyRef terms_id
 }
 
 service DominantCache {
