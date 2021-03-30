@@ -41,20 +41,6 @@ enum CashRegisterProviderParameterType {
     password_type
 }
 
-union Lifetime {
-    1: base.Timestamp timestamp
-    2: LifetimeInterval interval
-}
-
-struct LifetimeInterval {
-    1: optional i16 years
-    2: optional i16 months
-    3: optional i16 days
-    4: optional i16 hours
-    5: optional i16 minutes
-    6: optional i16 seconds
-}
-
 struct CashRegisterProviderParameter {
     1: required CashRegisterProviderParameterId id
     2: optional CashRegisterProviderParameterDescription description
@@ -93,9 +79,7 @@ struct ContractTemplate {
     1: required ContractTemplateRef ref
     2: optional ContractTemplateName name
     3: required ContractTemplateDescription description
-    4: optional Lifetime valid_since
-    5: optional Lifetime valid_until
-    6: required TermSetHierarchyRef terms_id
+    4: required TermSetHierarchyRef terms_id
 }
 
 service DominantCache {
