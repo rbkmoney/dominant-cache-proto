@@ -33,7 +33,10 @@ typedef string ContractTemplateRef
 typedef string ContractTemplateName
 typedef string ContractTemplateDescription
 typedef string TermSetHierarchyRef
-typedef string TradeBlockRef
+
+typedef string TradeBlocRef
+
+typedef string CountryRef
 
 enum CashRegisterProviderParameterType {
     string_type
@@ -84,10 +87,16 @@ struct ContractTemplate {
 }
 
 
-struct TradeBlock {
-    1: required TradeBlockRef ref
+struct TradeBloc {
+    1: required TradeBlocRef ref
     2: required string name
     3: optional string description
+}
+
+struct Country {
+    1: required CountryRef ref
+    2: required string name
+    3: set<TradeBlocRef> trade_blocs
 }
 
 service DominantCache {
@@ -100,6 +109,8 @@ service DominantCache {
 
         list<ContractTemplate> GetContractTemplates ()
 
-        list<TradeBlock> GetTradeBlocks ()
+        list<TradeBloc> GetTradeBlocs ()
+
+        list<Country> GetCountries ()
 
 }
