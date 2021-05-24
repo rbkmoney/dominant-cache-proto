@@ -34,7 +34,7 @@
         <dependency>
             <groupId>com.rbkmoney</groupId>
             <artifactId>damsel</artifactId>
-            <version>1.486-c3fb3d8</version>
+            <version>1.496-cc2875b</version>
         </dependency>
     </dependencies>
 
