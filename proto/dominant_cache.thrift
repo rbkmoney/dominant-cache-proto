@@ -1,10 +1,6 @@
 namespace java com.rbkmoney.damsel.dominant.cache
 namespace erlang dominant_cache
 
-include "base.thrift"
-include "domain.thrift"
-include "msgpack.thrift"
-
 typedef string CategoryRef
 typedef string CategoryName
 typedef string CategoryDescription
@@ -56,7 +52,6 @@ struct CashRegisterProviderProxy {
     1: required CashRegisterProviderProxyRef ref
     2: optional CashRegisterProviderProxyOptions options
 }
-
 
 struct Category {
     1: required CategoryRef ref
