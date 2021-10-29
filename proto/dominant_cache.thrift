@@ -82,7 +82,7 @@ struct CashRegisterProvider {
 struct ContractTemplate {
     1: required ContractTemplateRef ref
     2: optional ContractTemplateName name
-    3: required ContractTemplateDescription description
+    3: optional ContractTemplateDescription description
     4: required TermSetHierarchyRef terms_id
 }
 
